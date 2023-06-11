@@ -8,7 +8,7 @@ An interface for placement cell to keep records of students and schedule intervi
 - EJS
 - Bootstrap
 
-### 🔗 Hosted link: `https://placement-cell-application-qdpc.onrender.com/`
+### 🔗 Hosted link: https://placement-cell-application-qdpc.onrender.com/
 
 ## Functionality 
 - User/Employee signUp and signIn
