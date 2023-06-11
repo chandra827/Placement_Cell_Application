@@ -1,0 +1,64 @@
+<!-- css -->
+<style>
+  .card {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+</style>
+
+<!-- signup section -->
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img
+              src="https://img.freepik.com/free-photo/business-concept-with-team-close-up_23-2149151159.jpg?w=1060&t=st=1686415148~exp=1686415748~hmac=fdc876fe828c233d9f0119ca1ebde25188ea132207c5751d59de72a17d175cfd"
+              alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; height:630px; width:540px;" />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body  text-black">
+
+                <form action="/create" method="POST">
+
+                  <div class="d-flex align-items-center mb-3">
+                    <span class="h1 fw-bold mb-0">Sign Up</span>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" required />
+                  </div>
+                  <div class="form-outline mb-4">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email"
+                      required />
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required />
+                  </div>
+                  <div class="form-outline mb-4">
+                    <label for="confirm_password" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirm_password" name="confirm_password"
+                      required />
+                  </div>
+
+                  <div class="pt-1 mb-4">
+                    <button class="btn btn-dark btn-lg btn-block" type="submit">Signup</button>
+                  </div>
+
+                  <p class="mb-5 pb-lg-2" style="color: #393f81;">Already have an account?<a href="/"
+                      style="color: #393f81;">Login</a></p>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

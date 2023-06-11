@@ -1,0 +1,132 @@
+<!-- bootstrap 5 css cdn link -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+
+<!-- css -->
+<style>
+    a {
+        padding-left: 10px;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+
+    }
+
+    #button_to_apply {
+        margin-right: 30px;
+    }
+
+    #button_to_apply a {
+        padding: 6px 8px;
+    }
+
+    #opportunity {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+
+    }
+
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    #card_content {
+        display: flex;
+        padding: 10px;
+        margin-top: 5%;
+        width: 70%;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+
+    #image {
+        margin: 10px;
+    }
+
+    p {
+        font-size: 30px;
+        font-family: sans-serif;
+    }
+
+    #content {
+        margin: 10px;
+    }
+
+    span {
+        padding: 5px;
+        color: grey;
+    }
+
+    #details>div {
+        padding: 5px;
+    }
+
+    button {
+        
+        background-color: #6610F2;
+    }
+</style>
+
+<!-- header -->
+<%- include('header'); %>
+    <!-- auth -->
+    <% if(locals.user) {%>
+        <!-- main section -->
+        <section>
+            <!-- for loop -->
+            <% for(var i=0 ; i< body.length ; i++) { %>
+                <!-- card section -->
+                <div id="card_content">
+                    <!-- company info section -->
+                    <div id="opportunity">
+                        <!-- company logo -->
+                        <div id="image"><img src="<%= body[i].company_logo %>"></div>
+                        <div id="content">
+                            <!-- company title -->
+                            <p>
+                                <%= body[i].title %>
+                            </p>
+                            <!-- company name -->
+                            <p id="companyName">
+                                <%=body[i].company_name %>
+                            </p>
+                            <!-- company details -->
+                            <div id="details">
+                                <div>
+                                    <span>JobType &nbsp </span>
+                                    <%= body[i].job_type %>
+                                        <span>Application Publication&nbsp</span>
+                                        <%= body[i].publication_date %>
+                                </div>
+
+                                <div>
+                                    <span>Location &nbsp</span>
+                                    <%= body[i].candidate_required_location %>
+                                        <% if(body[i].salary.length>0) {%>
+                                            <span>Salary &nbsp</span>
+                                            <%= body[i].salary %>
+                                                <%}else { %>
+                                                    <span>Salary &nbsp</span> candidate performance in Interview
+                                                    <%}%>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- apply button -->
+                    <div id="button_to_apply">
+                        <button><a id="apply" href="<%= body[i].url %>" target="_blank">Apply</a>
+                        </button>
+                    </div>
+
+                </div>
+                <% } %>
+        </section>
+        <%} %>

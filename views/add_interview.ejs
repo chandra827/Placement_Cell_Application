@@ -1,0 +1,48 @@
+<!-- css -->
+<style>
+  .container {
+    width: 50%;
+  }
+
+  h4 {
+    color: rgb(0, 0, 0);
+    font-size: 2.4rem;
+  }
+</style>
+
+<!-- header file -->
+<%- include('header'); %>
+
+  <!-- auth -->
+  <% if (locals.user) {%>
+
+    <!-- main section -->
+    <div class="container mt-4 col-md-4">
+      <!-- heading -->
+      <h4 class="py-3">Add an interview </h4>
+      <!-- form -->
+      <form class="row g-3 mt-1 rounded p-2"
+      style="background-color: #fff; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+        action="/interview/create" method="POST">
+        <!-- company name -->
+        <div class="col-12">
+          <label for="company" class="form-label">Company</label>
+          <input type="text" class="form-control" placeholder="Enter company name" id="company" name="company"
+            required />
+        </div>
+        <!-- date -->
+        <div class="col-12">
+          <label for="date" class="form-label">Date</label>
+          <input type="date" class="form-control" placeholder="Enter student email" id="date" name="date" required />
+        </div>
+
+        <!-- add interview button -->
+        <div class="col-12 ">
+          <button type="submit" class="btn btn-primary">Add interview</button>
+        </div>
+
+      </form>
+    </div>
+    </div>
+
+    <%} %>
