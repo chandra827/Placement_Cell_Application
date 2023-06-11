@@ -8,7 +8,7 @@ An interface for placement cell to keep records of students and schedule intervi
 - EJS
 - Bootstrap
 
-### 🔗 Hosted link: 
+### 🔗 Hosted link: `https://placement-cell-application-qdpc.onrender.com/`
 
 ## Functionality 
 - User/Employee signUp and signIn
@@ -31,7 +31,7 @@ An interface for placement cell to keep records of students and schedule intervi
     - MONGODB_URL = [Your MongoDB Ur]
 
 * Run `npm start` to start the server
-* Open `'http://localhost:5000'` in your browser
+* Open `http://localhost:5000` in your browser
     
 
 ## Conclusion
