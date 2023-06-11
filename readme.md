@@ -26,9 +26,9 @@ An interface for placement cell to keep records of students and schedule intervi
 * Run `npm install` to install required dependencies 
 * Create `.env file` in your directory and add below lines:
 
-    - PORT = [Your Port]
-    - SECRET = [Your Secret]
-    - MONGO_URI = [Your MongoDB Ur]
+    - PORT = [5000]
+    - SESSION_SECRET_KEY = [Your Secret Key]
+    - MONGODB_URL = [Your MongoDB Ur]
 
 * Run `npm start` to start the server
 * Open `'http://localhost:5000'` in your browser
