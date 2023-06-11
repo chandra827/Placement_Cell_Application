@@ -8,7 +8,7 @@ An interface for placement cell to keep records of students and schedule intervi
 - EJS
 - Bootstrap
 
-### 🔗 Hosted link: 
+### 🔗 Hosted link: https://placement-cell-application-qdpc.onrender.com/
 
 ## Functionality 
 - User/Employee signUp and signIn
@@ -23,15 +23,15 @@ An interface for placement cell to keep records of students and schedule intervi
 ## Getting started
 
 * Clone the repository in your local system
-* Run 'npm install' to install required dependencies 
-* Create '.env file' in your directory and add below lines:
+* Run `npm install` to install required dependencies 
+* Create `.env file` in your directory and add below lines:
 
-    - PORT = [Your Port]
-    - SECRET = [Your Secret]
-    - MONGO_URI = [Your MongoDB Ur]
+    - PORT = [5000]
+    - SESSION_SECRET_KEY = [Your Secret Key]
+    - MONGODB_URL = [Your MongoDB Ur]
 
-* Run 'npm start' to start the server
-* Open 'http://localhost:5000' in your browser
+* Run `npm start` to start the server
+* Open `http://localhost:5000` in your browser
     
 
 ## Conclusion
